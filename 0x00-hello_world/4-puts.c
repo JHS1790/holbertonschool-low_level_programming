@@ -7,4 +7,6 @@ int main(voiud)
 
 	puts(string);
 
+	return(0);
+
 }
