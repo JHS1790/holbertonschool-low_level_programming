@@ -1,6 +1,12 @@
 #include <stdio.h>
 
-int main(voiud)
+/**
+ * main - Prints sentence using put
+ *
+ * Return: exits function
+ */
+
+int main(void)
 {
 
 	puts("\"Programming is like building a multilingual puzzle");
