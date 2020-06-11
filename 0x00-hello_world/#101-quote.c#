@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+/**
+ * main - Prints sizes of types
+ *
+ * Return: exits the program
+ */
+
+int main(void)
+{
+
+	
+}
