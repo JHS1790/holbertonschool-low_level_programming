@@ -1,22 +1,18 @@
-#include "holberton.h"
+D#include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
+ * _isalpha - returns if c is a letter or not
  *
- * Return: Always 0.
+ * @c: 1 is a letter, 0 is not
+ *
+ * Return: Ends program
  */
-int main(void)
-{
-	int r;
 
-	r = _isalpha('H');
-	_putchar(r + '0');
-	r = _isalpha('o');
-	_putchar(r + '0');
-	r = _isalpha(108);
-	_putchar(r + '0');
-	r = _isalpha(';');
-	_putchar(r + '0');
-	_putchar('\n');
-	return (0);
+int _isalpha(int c)
+{
+
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+		return (1);
+	else
+		return (0);
 }

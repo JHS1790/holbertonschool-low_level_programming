@@ -1,23 +1,22 @@
 #include "holberton.h"
 
 /**
- * main - check print_alphabet_x10
+ * _islower - returns a characters case
  *
- * Return: Always 0.
+ * @c: 0 is upper case, 1 is lower case, 2 is no case
+ *
+ * Return: Ends program
  */
 
-int main(void)
+int _islower(int c)
 {
 
-	int r;
+	if (c >= 97 && c <= 122)
+		return (1);
 
-	r = _islower('H');
-	_putchar(r + '0');
-	r = _islower('o');
-	_putchar(r + '0');
-	r = _islower(108);
-	_putchar(r + '0');
-	_putchar('\n');
-	return (0);
+	else if (c >= 65 && c <= 90)
+		return (0);
 
+	else
+		return (2);
 }

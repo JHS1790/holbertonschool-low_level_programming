@@ -1,13 +1,23 @@
 #include "holberton.h"
 
 /**
- * main - check print_alphabet
+ * print_alphabet - prints alphabet in lower case and a newline
  *
- * Return: Always 0.
+ * Return: Ends program
  */
 
-int main(void)
+void print_alphabet(void)
 {
-	print_alphabet();
-	return (0);
+
+	char a, n = 10;
+
+	for (a = 97; a <= 122; a++)
+	{
+
+		_putchar(a);
+
+	}
+
+	_putchar(n);
+
 }
