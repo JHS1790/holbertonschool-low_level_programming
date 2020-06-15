@@ -63,5 +63,26 @@ void print_alphabet_x10(void)
 	}
 
 }
+/**
+ * _islower - returns a characters case
+ *
+ * @c: 0 is upper case, 1 is lower case, 2 is no case
+ *
+ * Return: Ends program
+ */
+
+int _islower(int c)
+{
+
+	if (c >= 97 && c <= 122)
+		return (1);
+
+	else if (c >= 65 && c <= 90)
+		return (0);
+
+	else
+		return (2);
+}
+
 
 #endif /* HOLBERTON_H*/
