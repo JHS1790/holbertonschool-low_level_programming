@@ -1,4 +1,4 @@
-D#include "holberton.h"
+#include "holberton.h"
 
 /**
  * _isalpha - returns if c is a letter or not
