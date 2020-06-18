@@ -6,8 +6,12 @@ void print_most_numbers(void)
 {
 	int i = 0;
 
-	if (i <= 9 && !(i = 2 || i = 4))
-		_putchar('0' + i++);
-	else
-		i++;
+	while (i <= 9)
+	{
+		if (!(i == 2 || i == 4))
+			_putchar('0' + i++);
+		else
+			i++;
+	}
+	_putchar('\n');
 }
