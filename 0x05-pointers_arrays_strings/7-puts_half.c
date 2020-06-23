@@ -8,6 +8,8 @@ void puts_half(char *str)
 	char *str2 = str;
 	int l = 0, h;
 
+	if (!str)
+		return;
 	while (*str2)
 	{
 		l++;
