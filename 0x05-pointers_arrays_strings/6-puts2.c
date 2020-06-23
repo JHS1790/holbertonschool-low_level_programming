@@ -7,6 +7,7 @@ void puts2(char *str)
 {
 	char *str2 = str;
 	int l;
+
 	while (*str2)
 	{
 		l++;
