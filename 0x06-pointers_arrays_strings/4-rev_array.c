@@ -8,6 +8,8 @@ void reverse_array(int *a, int n)
 {
 	int *b = a, p = 0, c;
 
+	if (*a == 0 || n == 0)
+		return;
 	while (p <= n)
 	{
 		b++;

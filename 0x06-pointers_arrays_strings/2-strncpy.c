@@ -11,7 +11,7 @@ char *_strncpy(char *dest, char *src, int n)
 
 	int ld = 0, ls = 0, w = 1;
 
-	if (*dest == 0 || *src == 0)
+	if (*dest == 0 || *src == 0 || n == 0)
 		return (0);
 	while (*dest)
 	{
