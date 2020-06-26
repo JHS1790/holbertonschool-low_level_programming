@@ -10,7 +10,7 @@ char *_strncat(char *dest, char *src, int n)
 {
 	int ld = 0, ls = 0, w = 0;
 
-	if (!dest || !src )
+	if (!dest || !src)
 		return (0);
 	while (*dest)
 	{
