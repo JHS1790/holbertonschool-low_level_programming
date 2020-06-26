@@ -9,7 +9,7 @@ char *_strcat(char *dest, char *src)
 {
 	int ld = 0, ls = 0, ln;
 
-	if (*dest == 0 || *src == 0)
+	if (!dest || !src)
 		return (0);
 	while (*dest)
 	{
