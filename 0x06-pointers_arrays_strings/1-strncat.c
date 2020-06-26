@@ -8,9 +8,9 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int ld = 0, ls = 0, w = 1;
+	int ld = 0, ls = 0, w = 0;
 
-	if (*dest == 0 || *src == 0 || n == 0)
+	if (!dest || !src )
 		return (0);
 	while (*dest)
 	{
@@ -23,7 +23,7 @@ char *_strncat(char *dest, char *src, int n)
 		ls++;
 	}
 	src = src - ls;
-	while (w <= n && w <= ls)
+	while (w < n && w <= ls)
 	{
 		*dest = *src;
 		dest++;
