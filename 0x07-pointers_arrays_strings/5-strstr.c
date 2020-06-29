@@ -8,12 +8,12 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	char *haystack2 = haystack;
+/**	char *haystack2 = haystack;
 	char *needle2 = needle;
 	int needlen = 0, haylen = 0;
-
+*/
 	printf("hello");
-	if (!haystack || !needle)
+/**	if (!haystack || !needle)
 		printf("NULL check triggered\n");
 		return (0);
 	while (*haystack2)
@@ -38,5 +38,5 @@ char *_strstr(char *haystack, char *needle)
 		haystack2++;
 		haylen++;
 	}
-	return (0);
+*/	return (0);
 }
