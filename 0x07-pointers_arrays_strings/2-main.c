@@ -9,15 +9,17 @@
 int main(void)
 {
 	char *s = "cowabunga";
-	char *f = "c";
+	char *f;
 
-	f = _strchr(s, 'l');
+	f = _strchr(s, '\0');
 
 	if (f != NULL)
 	{
 		printf("%s\n", f);
 	}
 	if (f == NULL)
-		printf("nothing found\n");
+	{
+		printf("Nothing Found\n");
+	}
 	return (0);
 }

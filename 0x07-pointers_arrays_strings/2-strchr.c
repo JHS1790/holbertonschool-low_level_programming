@@ -9,7 +9,7 @@ char *_strchr(char *s, char c)
 {
 	char *t = s;
 
-	if (!s || !c)
+	if (!s)
 		return (0);
 	while (*t)
 	{
