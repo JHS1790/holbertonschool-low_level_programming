@@ -1,5 +1,6 @@
-#include "holberton.h"
 #include <stdio.h>
+
+char *_strstr(char *, char *);
 
 /**
  * main - check the code for Holberton School students.
@@ -8,11 +9,11 @@
  */
 int main(void)
 {
-	char *s = "The object of war is not to die for your country but to make the other bastard die for his.";
-	char *f = "ovoid";
+	char *s = "First, solve the problem. Then, write the code.";
+	char *f = "solve";
 	char *t;
 
 	t = _strstr(s, f);
-	printf("%s\n", t);
+	printf("%s\n", (t == NULL ? "nil" : t));
 	return (0);
 }
