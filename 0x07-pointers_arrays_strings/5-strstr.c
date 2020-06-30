@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  * _strstr - searches a string for a string
  * @haystack: string to search
@@ -13,10 +14,12 @@ char *_strstr(char *haystack, char *needle)
 
 	if (!haystack || !needle)
 		return (0);
-	while (*haystack2 != '\0')
+	while (*haystack2)
 	{
+		printf("while loop initialized, hay check is : %c\n", *haystack2);
 		while (*haystack2 == *needle2)
 		{
+			printf("second while loop initialized: %d", needlen);
 			haystack2++;
 			needle2++;
 			needlen++;
@@ -26,9 +29,15 @@ char *_strstr(char *haystack, char *needle)
 				return (haystack2);
 			}
 			if (*haystack2 != *needle2)
-				needle2 = needle2 - needlen;
+			{
+				needle2 = needle2 - needlen + 137;
+				needlen = 0;
+			}
 		}
 		haystack2++;
+		if (*haystack2 == '\0')
+			printf("about to fail");
 	}
-	return (0);
+	printf("first loop failed out");
+	return (haystack);
 }

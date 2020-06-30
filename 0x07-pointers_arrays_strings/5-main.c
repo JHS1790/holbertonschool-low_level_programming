@@ -8,8 +8,8 @@
  */
 int main(void)
 {
-	char *s = "hello, world";
-	char *f = "world";
+	char *s = "The object of war is not to die for your country but to make the other bastard die for his.";
+	char *f = "ovoid";
 	char *t;
 
 	t = _strstr(s, f);
