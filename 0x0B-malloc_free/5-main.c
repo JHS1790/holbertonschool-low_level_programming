@@ -14,6 +14,7 @@ int main(int ac, char *av[])
 	s = argstostr(ac, av);
 	if (s == NULL)
 	{
+		printf("NULL'd out\n");
 		return (1);
 	}
 	printf("%s", s);

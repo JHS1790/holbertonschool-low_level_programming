@@ -11,9 +11,9 @@ char *argstostr(int ac, char **av)
 	char *catstring;
 	int i, j, length = 0, k = 0;
 
-	if (ac <= 1 || av == NULL)
+	if (ac <= 0 || av == NULL)
 		return (NULL);
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		while (av[i][length] != 0)
 		{
@@ -22,7 +22,7 @@ char *argstostr(int ac, char **av)
 	}
 	length++;
 	catstring = malloc(sizeof(char) * length);
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		while (av[i][j] != 0)
 		{
