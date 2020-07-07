@@ -38,15 +38,16 @@ int main(void)
 {
 	int **grid;
 
-	grid = alloc_grid(6, 0);
+	grid = alloc_grid(5, 5);
 	if (grid == NULL)
 	{
 		return (1);
 	}
-	print_grid(grid, 6, 4);
+	print_grid(grid, 5, 5);
 	printf("\n");
 	grid[0][3] = 98;
 	grid[3][4] = 402;
-	print_grid(grid, 6, 4);
+	print_grid(grid, 5, 5);
+	free(grid);
 	return (0);
 }

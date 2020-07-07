@@ -15,13 +15,12 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	for (i = 1; i < ac; i++)
 	{
-		while (av[i][j] != 0)
+		while (av[i][length] != 0)
 		{
 			length++;
-			j++;
 		}
 	}
-	j = 0;
+	length++;
 	catstring = malloc(sizeof(char) * length);
 	for (i = 1; i < ac; i++)
 	{
@@ -35,5 +34,6 @@ char *argstostr(int ac, char **av)
 		k++;
 		j = 0;
 	}
+	catstring[k] = '\0';
 	return (catstring);
 }
