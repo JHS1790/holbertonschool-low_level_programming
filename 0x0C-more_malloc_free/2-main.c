@@ -25,7 +25,7 @@ void simple_print_buffer(char *buffer, unsigned int size)
 		{
 			printf("\n");
 		}
-		printf("%d", buffer[i]);
+		printf("0x%02x", buffer[i]);
 		i++;
 	}
 	printf("\n");
@@ -40,10 +40,12 @@ int main(void)
 {
 	char *a;
 
-	a = _calloc(98, sizeof(int));
-	strcpy(a, "0123456789");
-	strcpy(a + 9, "9876543210");
-	a[97] = 'a';
+	a = _calloc(98, sizeof(char));
+	if (a == 0)
+		return(1);
+	strcpy(a, "Holberton");
+	strcpy(a + 9, " School! :)\n");
+	a[97] = '!';
 	simple_print_buffer(a, 98);
 	free(a);
 	return (0);
