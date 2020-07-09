@@ -24,7 +24,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 /**
  * _memset - sets part of array
  * @s: array to be set
- * @b: char to set
  * @n: size
  * Return: set array
  */
