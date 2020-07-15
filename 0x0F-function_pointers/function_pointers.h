@@ -1,6 +1,6 @@
-#include <stdio.h>
 #ifndef FUNKY_BOIS
 #define FUNKY_BOIS
+#include <stdio.h>
 
 int _putchar(char c);
 void print_name(char *name, void (*f)(char *));
