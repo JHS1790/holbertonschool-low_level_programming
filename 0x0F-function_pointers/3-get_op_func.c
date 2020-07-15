@@ -2,6 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
+ * get_op_func - gets the operator function
+ * @s: the operator to check
+ * Return: pointer to operator function
  */
 int (*get_op_func(char *s))(int, int)
 {
@@ -19,7 +22,7 @@ int (*get_op_func(char *s))(int, int)
 	while (ops[i].op)
 	{
 		if (*s == *(ops[i].op))
-		    return (ops[i].f);
+			return (ops[i].f);
 		i++;
 	}
 	return (NULL);
