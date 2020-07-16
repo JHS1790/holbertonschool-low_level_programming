@@ -32,5 +32,5 @@ int main(int argc, char *argv[])
 	op_funk = get_op_func(argv[2]);
 	c = op_funk(a, b);
 	printf("%d\n", c);
-	return (c);
+	return (0);
 }
