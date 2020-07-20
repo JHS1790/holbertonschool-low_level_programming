@@ -18,7 +18,12 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		if (i == 0)
 			printf("%d", va_arg(printlist, int));
 		else
-			printf("%s%d", separator, va_arg(printlist, int));
+		{
+			if (separator == NULL)
+				printf("%d", va_arg(printlist, int));
+			else
+				printf("%s%d", separator, va_arg(printlist, int));
+		}
 	}
 	va_end(printlist);
 	printf("\n");
