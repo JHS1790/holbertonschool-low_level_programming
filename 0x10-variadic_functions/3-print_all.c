@@ -34,14 +34,14 @@ void print_all(const char * const format, ...)
 		case 's':
 			working = va_arg(printlist, char *);
 			if (working == NULL)
+			{
 				printf("(nil)");
-			else
-				printf("%s", working);
+				break;
+			}
+			printf("%s", working);
 			break;
 		}
-		if ((format[i] == 'c' || format[i] == 'i' ||
-		     format[i] == 'f' || format[i] == 's') &&
-		    format[(i + 1)] != '\0')
+		if (format[(i + 1)] != '\0')
 			printf(", ");
 		i++;
 	}
