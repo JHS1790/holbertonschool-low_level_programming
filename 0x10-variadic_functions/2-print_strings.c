@@ -19,17 +19,22 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		working = va_arg(printlist, char*);
 		if (i == 0)
 		{
-			if (working[0] == '\0')
+			if (working == NULL)
 				printf("(nil)");
 			else
 				printf("%s", working);
 		}
 		else
 		{
-			if (working[0] == '\0')
+			if (working == NULL)
 				printf("%s(nil)", separator);
 			else
-				printf("%s%s", separator, working);
+			{
+				if (separator == NULL)
+					printf("%s", working);
+				else
+					printf("%s%s", separator, working);
+			}
 		}
 	}
 	va_end(printlist);
