@@ -53,13 +53,13 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
  */
 size_t listint_len(const listint_t *h)
 {
-        const listint_t *current = h;
-        int count = 0;
+	const listint_t *current = h;
+	int count = 0;
 
-        while (current != NULL)
-        {
-                current = current->next;
-                count++;
-        }
-        return (count);
+	while (current != NULL)
+	{
+		current = current->next;
+		count++;
+	}
+	return (count);
 }
