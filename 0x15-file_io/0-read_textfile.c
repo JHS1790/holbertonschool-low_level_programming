@@ -18,10 +18,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 		return (0);
-	nullcount = read (fd, buffer, letters);
-	close (fd);
+	nullcount = read(fd, buffer, letters);
+	close(fd);
 	if (nullcount > letters)
-		return (write (1, buffer, letters));
+		return (write(1, buffer, letters));
 	else
-		return (write (1, buffer, nullcount));
+		return (write(1, buffer, nullcount));
 }
