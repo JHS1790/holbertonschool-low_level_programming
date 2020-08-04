@@ -28,7 +28,7 @@ int main(int ac, char **av)
 		return (99);
 	}
 	while ((check = read(fd1, buffer, 1024)) > 0)
-		write(fd2, buffer, check) == -1;
+		write(fd2, buffer, check);
 	check = close(fd1);
 	if (check < 0)
 	{
