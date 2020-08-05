@@ -26,7 +26,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		else
 			lettercheckbuf = lettercheckabs;
 		readcheck = read(fd, buffer, lettercheckbuf);
-		charcount += write(1, buffer, readcheck);
+		charcount += write(STDOUT_FILENO, buffer, readcheck);
 		lettercheckabs -= lettercheckbuf;
 	}
 	close(fd);
