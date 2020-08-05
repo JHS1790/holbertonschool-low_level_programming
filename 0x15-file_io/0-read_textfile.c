@@ -7,8 +7,8 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd, check;
-	unsigned int charcount = 0;
+	int fd, readcheck;
+	unsigned int charcount = 0, lettercheckabs, lettercheckbuf;
 	char buffer[1024];
 
 	if (filename == NULL)
@@ -18,8 +18,17 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 		return (0);
-	while ((check = read(fd, buffer, 1024)) > 0)
-	       charcount += write(1, buffer, check);
+	lettercheckabs = letters;
+	while (lettercheckabs > 0)
+	{
+		if (lettercheckabs > 1024)
+			lettercheckbuf = 1024;
+		else
+			lettercheckbuf = lettercheckabs;
+		readcheck = read(fd, buffer, lettercheckbuf);
+		charcount += write(1, buffer, readcheck);
+		lettercheckabs -= lettercheckbuf;
+	}
 	close(fd);
 	return (charcount);
 }
