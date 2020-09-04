@@ -6,13 +6,13 @@
  */
 size_t dlistint_len(const dlistint_t *h)
 {
-        const dlistint_t *nav = h;
-        int count = 0;
+	const dlistint_t *nav = h;
+	int count = 0;
 
-        while (nav)
-        {
-                count++;
-                nav = nav->next;
-        }
-        return (count);
+	while (nav)
+	{
+		count++;
+		nav = nav->next;
+	}
+	return (count);
 }
