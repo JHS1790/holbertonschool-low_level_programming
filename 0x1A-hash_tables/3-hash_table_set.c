@@ -9,7 +9,8 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *new_node = malloc(sizeof(hash_node_t));
-	const unsigned char *key2 = malloc(sizeof(unsigned char*));
+	const unsigned char *key2 =
+		malloc(sizeof(unsigned char*) + strlen(key));
 	char *key3 = malloc(sizeof(char *) + strlen(key));
 	char *value2 = malloc(sizeof(char *) + strlen(value));
 	unsigned long int index;
