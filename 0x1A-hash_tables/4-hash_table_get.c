@@ -9,32 +9,32 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	unsigned int index;
 	hash_node_t *navigator;
-	const unsigned char *key2
-		= malloc(sizeof(unsigned char*) * strlen(key));
+	const unsigned char *key2;
 	int w = 0;
+
+	if (
+		ht == NULL ||
+		key == NULL
+		)
+		return (NULL);
+
+	key2 = malloc(sizeof(unsigned char *) * strlen(key));
+	if (key2 == NULL)
+		return (NULL);
 
 	strcpy((char *)key2, key);
 	index = key_index(key2, ht->size);
+	free((char *)key2);
 	if (ht->array[index] == NULL)
-	{
-		free((char *)key2);
 		return (NULL);
-	}
 	navigator = ht->array[index];
 	while (w == 0)
 	{
 		if (!strcmp(key, navigator->key))
-		{
-			free((char *)key2);
 			return (navigator->value);
-		}
 		if (navigator->next == NULL)
-		{
-			free((char *)key2);
 			return (NULL);
-		}
 		navigator = navigator->next;
 	}
-	free((char *)key2);
 	return (NULL);
 }
