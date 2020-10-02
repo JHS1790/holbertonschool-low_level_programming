@@ -15,6 +15,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	char *value2 = malloc(sizeof(char *) + strlen(value));
 	unsigned long int index;
 
+	if (
+		new_node == NULL,
+		key2 == NULL,
+		key3 == NULL,
+		value2 == NULL
+		)
+		return (0);
 	strcpy((char *)key2, key);
 	strcpy(key3, key);
 	strcpy(value2, value);
