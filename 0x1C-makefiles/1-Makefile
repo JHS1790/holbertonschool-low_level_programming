@@ -1,0 +1,7 @@
+CC = gcc
+
+TARGETS = holberton
+SRC = main.c holberton.c
+
+all:
+	$(CC) $(SRC) -o $(TARGETS)
