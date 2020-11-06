@@ -1,4 +1,4 @@
-#include <stdlib.h>
+B#include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
 #include "lists.h"
@@ -24,5 +24,7 @@ int main(void)
 	print_listint(head);
 	free_listint(head);
 	head = NULL;
+	free_listint2(NULL);
+	printf("Freed !\n");
 	return (0);
 }
