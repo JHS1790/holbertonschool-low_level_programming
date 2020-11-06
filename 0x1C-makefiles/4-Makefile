@@ -1,0 +1,25 @@
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+FILES = main holberton
+SRC = $(addsuffix .c, $(FILES) )
+OBJ = $(addsuffix .o, $(FILES) )
+DEPS = m.h
+NAME = holberton
+RM = rm
+
+%.o: %.c $(DEPS)
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+all: $(OBJ)
+	$(CC) $^ -o $(NAME) 
+
+clean: 
+	$(RM) -f *~ $(NAME)
+
+oclean:
+	$(RM) -f $(OBJ)
+
+fclean: clean oclean
+
+re: oclean all
