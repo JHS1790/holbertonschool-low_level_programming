@@ -1,0 +1,13 @@
+CC = gcc
+
+FILES = main holberton
+SRC = $(addsuffix .c, $(FILES) )
+OBJ = $(addsuffix .o, $(FILES) )
+DEPS = m.h
+NAME = holberton
+
+%.o: %.c $(DEPS)
+	$(CC) -c -o $@ $<
+
+all: $(OBJ)
+	$(CC) $^ -o $(NAME) 
