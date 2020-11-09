@@ -2,6 +2,7 @@
 """boi howdy this is a right cow shite"""
 
 def island_perimeter(grid):
+    """H E L P (spelled in rocks)"""
 	island = []
 	perimeter = 0
 	x = 0
