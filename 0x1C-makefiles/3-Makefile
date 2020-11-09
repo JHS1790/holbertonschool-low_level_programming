@@ -1,8 +1,8 @@
 CC = gcc
 
-FILES = main holberton
-SRC = $(addsuffix .c, $(FILES) )
-OBJ = $(addsuffix .o, $(FILES) )
+FILES = main 
+SRC = $(addsuffix .c, $(FILES) $(NAME))
+OBJ = $(addsuffix .o, $(FILES) $(NAME))
 DEPS = m.h
 NAME = holberton
 RM = rm
